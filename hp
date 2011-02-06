@@ -1,0 +1,12 @@
+#!/usr/bin/env php -q
+<?php 
+
+require_once __DIR__.'/lib/PrinterHack/Autoloader.php'; 
+require_once __DIR__.'/lib/Zend/Loader/Autoloader.php';
+
+$loader = Zend_Loader_Autoloader::getInstance();
+$loader->registerNamespace('Zend');
+
+PrinterHack\Autoloader::register();
+PrinterHack\Service::run();
+exit(0);
