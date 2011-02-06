@@ -6,6 +6,8 @@ abstract class Service
 {
 	protected $options = array();
 	
+	const DEFAULT_SERVICE = 'Hardset';
+	
 	public static function run()
 	{
 		try {
@@ -21,9 +23,13 @@ abstract class Service
 		$target = $opts->target;
 		$service = $opts->service;
 		
-		if (empty($target) || empty($service)) {
+		if (empty($target)) {
 			echo $opts->getUsageMessage();
 			exit(1);
+		}
+		
+		if (empty($service)) {
+			$service = self::DEFAULT_SERVICE;
 		}
 		
 		return self::callService($service, $target, $opts);
