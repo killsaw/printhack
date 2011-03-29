@@ -1,10 +1,10 @@
 <?php
 
-namespace PrinterHack;
+namespace PrintHack\DataService;
 
-class Service_Weather extends Service
+class Weather implements DataService
 {
-	public function getMessage()
+	public function getMessage($options=array())
 	{
 		$geoip =json_decode(
 			file_get_contents('http://freegeoip.net/json/'),

@@ -11,3 +11,8 @@ You may also just send random stuff to it like so:
 	$ ./hp -t 192.168.1.34 I AM A PRINTER
 
 You are limited to 32 character messages. You may send more, but they would flow off the end of the display.
+
+//    I AM A PRINTER AND THIS IS GREAT
+// 
+// -> I AM A PRINTER A
+//    ND THIS IS GREAT
